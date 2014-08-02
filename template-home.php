@@ -4,17 +4,17 @@ Template Name: Homepage Template
 */
 ?>
 
+<div id="ajaxSignupAlert" class="alert alert-success fade in" role="alert" style="display:none;">
+  <!--<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>-->
+  <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+</div>
+
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/page', 'header'); ?>
   <?php get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
 
 <div class="col-lg-12">
-
-<div id="ajaxSignupAlert" class="alert alert-success fade in" role="alert" style="display:none;">
-  <!--<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>-->
-  <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
-</div>
 
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Launch demo modal

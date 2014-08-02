@@ -16,6 +16,16 @@
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
         endif;
       ?>
+      <div class="nav navbar-nav navbar-right">
+        <form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get" class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" id="s" name="s" class="form-control" value="<?php echo get_search_query(); ?>" placeholder="Search" name="q">
+            <div class="input-group-btn">
+                <button class="btn btn-dark" type="submit"><i class="fa fa-fw fa-search"></i></button>
+            </div>
+        </div>
+        </form>
+      </div>
     </nav>
   </div>
 </header>
