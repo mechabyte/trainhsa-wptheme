@@ -9,6 +9,34 @@ Template Name: Homepage Template
   <?php get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
 
+<div class="col-lg-12">
+
+<div id="ajaxSignupAlert" class="alert alert-success fade in" role="alert" style="display:none;">
+  <!--<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>-->
+  <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
+</div>
+
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Free Trial Signup</h4>
+      </div>
+      <div class="modal-body">
+        <?php echo do_shortcode('[contact-form-7 id="11" title="Contact form 1"]'); ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
 <div class="col-md-4">
     <div class="list-group social-box">
         <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">

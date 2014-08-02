@@ -60,4 +60,8 @@ var UTIL = {
 
 $(document).ready(UTIL.loadEvents);
 
+function homeAjaxSignup() {
+        alert("Sent!");
+}
+
 })(jQuery); // Fully reference jQuery after this point.
