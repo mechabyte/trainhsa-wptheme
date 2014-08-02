@@ -9,7 +9,7 @@
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner">
 		<div class="item active">
-            <img class="img-responsive" src="http://trainhsa.dev/wp-content/uploads/2014/01.jpg" />
+            <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/01.jpg" />
             <div class="carousel-caption">
                 <h1 class="carousel-caption-header">Slide 1</h1>
                 <p class="carousel-caption-text hidden-sm hidden-xs">
@@ -19,7 +19,7 @@
         </div>
         
         <div class="item">
-            <img class="img-responsive" src="http://trainhsa.dev/wp-content/uploads/2014/02.jpg" />
+            <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/02.jpg" />
             <div class="carousel-caption">
                 <h1 class="carousel-caption-header">Slide 2</h1>
                 <p class="carousel-caption-text hidden-sm hidden-xs">
@@ -29,7 +29,7 @@
         </div>
         
         <div class="item">
-            <img class="img-responsive" src="http://trainhsa.dev/wp-content/uploads/2014/03.jpg" />
+            <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/03.jpg" />
             <div class="carousel-caption">
                 <h1 class="carousel-caption-header">Slide 3</h1>
                 <p class="carousel-caption-text hidden-sm hidden-xs">
