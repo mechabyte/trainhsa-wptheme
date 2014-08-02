@@ -11,12 +11,7 @@
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-        endif;
-      ?>
-      <div class="nav navbar-nav navbar-right">
+      <!--<div class="nav navbar-nav navbar-right navbar-search">
         <form action="<?php bloginfo('siteurl'); ?>" id="searchform" method="get" class="navbar-form" role="search">
         <div class="input-group">
             <input type="text" id="s" name="s" class="form-control" value="<?php echo get_search_query(); ?>" placeholder="Search" name="q">
@@ -25,7 +20,12 @@
             </div>
         </div>
         </form>
-      </div>
+      </div>-->
+      <?php
+        if (has_nav_menu('primary_navigation')) :
+          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav navbar-right'));
+        endif;
+      ?>
     </nav>
   </div>
 </header>

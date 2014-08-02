@@ -9,16 +9,23 @@ Template Name: Homepage Template
   <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
 </div>
 
+<div class="col-md-4">
+	<button class="btn btn-primary btn-xl btn-block">Athletes</button>
+</div>
+<div class="col-md-4">
+	<button class="btn btn-primary btn-xl btn-block" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+</div>
+<div class="col-md-4">
+	<button class="btn btn-primary btn-xl btn-block">Facilities</button>
+</div>
+<br/><br/><br/><br/>
+
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/page', 'header'); ?>
+  <?php //get_template_part('templates/page', 'header'); ?>
   <?php get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
 
 <div class="col-lg-12">
-
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -36,38 +43,7 @@ Template Name: Homepage Template
 </div>
 
 </div>
-
-<div class="col-md-4">
-    <div class="list-group social-box">
-        <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
-            <h3 class="pull-right">
-                <i class="fa fa-facebook-square"></i>
-            </h3>
-            <h4 class="list-group-item-heading count">
-                <?php echo number_format( mechabyteSocialStats::facebook(117978191570403) ); ?></h4>
-            <p class="list-group-item-text">
-                Like Us on Facebook</p>
-        </a><a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
-            <h3 class="pull-right">
-                <i class="fa fa-twitter-square"></i>
-            </h3>
-            <h4 class="list-group-item-heading count">
-                344</h4>
-            <p class="list-group-item-text">
-                Follow Us on Twitter</p>
-        </a>
-        <a href="http://www.jquery2dotnet.com" class="list-group-item youtube">
-                        <h3 class="pull-right">
-                            <i class="fa fa-youtube-play"></i>
-                        </h3>
-                        <h4 class="list-group-item-heading count">
-                            <?php echo ( mechabyteSocialStats::youtube('techteenager') ); ?></h4>
-                        <p class="list-group-item-text">
-                            Subscribe on YouTube</p>
-                    </a>
-    </div>
-</div>
-<div class='col-md-8'>
+<div class='col-md-8 willAnimate fadeInLeftBig'>
 	      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
 	        <!-- Bottom Carousel Indicators -->
 	        <ol class="carousel-indicators">
@@ -128,3 +104,33 @@ Template Name: Homepage Template
 	        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
 		</div>
 	</div>
+	<div class="col-md-4">
+<div class="list-group social-box">
+        <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like willAnimate fadeInRightBig">
+            <h3 class="pull-right">
+                <i class="fa fa-facebook-square"></i>
+            </h3>
+            <h4 class="list-group-item-heading count">
+                <?php echo number_format( mechabyteSocialStats::facebook(117978191570403) ); ?></h4>
+            <p class="list-group-item-text">
+                Like Us on Facebook</p>
+        </a><a href="http://www.jquery2dotnet.com" class="list-group-item twitter willAnimate fadeInRightBig" data-wow-delay="150ms">
+            <h3 class="pull-right">
+                <i class="fa fa-twitter-square"></i>
+            </h3>
+            <h4 class="list-group-item-heading count">
+                344</h4>
+            <p class="list-group-item-text">
+                Follow Us on Twitter</p>
+        </a>
+        <a href="http://www.jquery2dotnet.com" class="list-group-item youtube willAnimate fadeInRightBig" data-wow-delay="300ms">
+                        <h3 class="pull-right">
+                            <i class="fa fa-youtube-play"></i>
+                        </h3>
+                        <h4 class="list-group-item-heading count">
+                            <?php echo ( mechabyteSocialStats::youtube('techteenager') ); ?></h4>
+                        <p class="list-group-item-text">
+                            Subscribe on YouTube</p>
+                    </a>
+    </div>
+</div>
