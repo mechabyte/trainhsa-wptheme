@@ -43,7 +43,7 @@ Template Name: Homepage Template
 </div>
 
 </div>
-<div class='col-md-8 willAnimate fadeInLeftBig'>
+<div class='col-md-8 willAnimate fadeInLeftBig compliment-color'>
 	      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
 	        <!-- Bottom Carousel Indicators -->
 	        <ol class="carousel-indicators">
@@ -104,7 +104,7 @@ Template Name: Homepage Template
 	        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
 		</div>
 	</div>
-	<div class="col-md-4">
+<div class="col-md-4 compliment-dark">
 <div class="list-group social-box">
         <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like willAnimate fadeInRightBig">
             <h3 class="pull-right">
