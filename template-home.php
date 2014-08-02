@@ -9,13 +9,6 @@ Template Name: Homepage Template
   <?php get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
 
-<?php 
-
-echo json_encode( mechabyteSocialNetworks::facebook(117978191570403,'likes') );
-
-?>
-
-
 <div class="col-md-4">
     <div class="list-group social-box">
         <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
@@ -23,7 +16,7 @@ echo json_encode( mechabyteSocialNetworks::facebook(117978191570403,'likes') );
                 <i class="fa fa-facebook-square"></i>
             </h3>
             <h4 class="list-group-item-heading count">
-                1,694</h4>
+                <?php echo number_format( mechabyteSocialStats::facebook(117978191570403) ); ?></h4>
             <p class="list-group-item-text">
                 Like Us on Facebook</p>
         </a><a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
@@ -40,9 +33,9 @@ echo json_encode( mechabyteSocialNetworks::facebook(117978191570403,'likes') );
                             <i class="fa fa-youtube-play"></i>
                         </h3>
                         <h4 class="list-group-item-heading count">
-                            X,XXX</h4>
+                            <?php echo ( mechabyteSocialStats::youtube('techteenager') ); ?></h4>
                         <p class="list-group-item-text">
-                            Watch Our YouTube Videos</p>
+                            Subscribe on YouTube</p>
                     </a>
     </div>
 </div>
