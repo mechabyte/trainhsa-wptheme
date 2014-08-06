@@ -18,6 +18,8 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  add_image_size('slider-full',2400,800);
+  add_image_size('slider',1200,400);
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
@@ -44,6 +46,15 @@ function roots_widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
   ));
+
+  register_sidebar(array(
+    'name'          => __('Frontpage Widgets', 'roots'),
+    'id'            => 'sidebar-frontpage',
+    'before_widget' => '<section class="widget %1$s %2$s col-xs-12 col-md-4">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+    ));
 
   register_sidebar(array(
     'name'          => __('Footer', 'roots'),

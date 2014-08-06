@@ -60,6 +60,8 @@ var UTIL = {
 
 $(document).ready(UTIL.loadEvents);
 
+/* Animations on scroll */
+
 var wow = new WOW(
   {
     boxClass:     'willAnimate',      // animated element css class (default is wow)
@@ -70,5 +72,7 @@ var wow = new WOW(
   }
 );
 wow.init();
+
+/* Hover Dropdowns */
 
 })(jQuery); // Fully reference jQuery after this point.

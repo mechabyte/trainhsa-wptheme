@@ -22,7 +22,8 @@ $roots_includes = array(
   'lib/comments.php',        // Custom comments modifications
   'lib/scripts.php',         // Scripts and stylesheets
   'lib/extras.php',          // Custom functions
-  'lib/mb-socialnetworks.php'// Social networking stuff
+  'lib/mb-socialnetworks.php',// Social networking stuff
+  'admin/admin-init.php'     // Theme Options
 );
 
 foreach ($roots_includes as $file) {

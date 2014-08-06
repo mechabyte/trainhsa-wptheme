@@ -1,3 +1,20 @@
+.transition(@duration:0.2s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  -o-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
 @btn-black-color:               #fff;
 @btn-black-bg:                  #171717;
 @btn-black-border:              lighten(@btn-black-bg, 25%);
@@ -12,6 +29,11 @@
 	}
 }
 
+.img-responsive.img-full {
+	width:100%;
+	height:auto;
+}
+
 @media(max-width: @screen-xs-max){
 	.navbar-search {
 		margin:0em;
@@ -23,6 +45,82 @@
 	}
 }
 
+#homeWidgets {
+	.main {
+		background-color:@gray-lighter;
+	}
+	height:6em;
+	background-color:@gray-lighter;
+}
+
 
 /* Carousel */
 
+/* CTA Boxes */
+.ctaboxes {
+	padding-top:2em;
+	padding-bottom:4em;
+}
+.box {
+	padding-top:2em;
+
+	a {
+		.border-radius(@border-radius-base);
+		color:@gray;
+		border:1px solid @gray;
+		&:hover {
+			text-decoration:none;
+			border:1px solid @brand-primary !important;
+			background-color:@brand-primary !important;
+			color:#ffffff !important;
+			.transition(200ms);
+		}
+		&.btn-success {
+			color:#ffffff !important;
+			border-color:#3c9a5f !important;
+			&:hover {
+				color:#ffffff;
+				border-color:#3c9a5f !important;
+			}
+		}
+	}
+
+	.icon {
+			text-align:center;
+			.image {
+				i {
+					 font-size: 7em !important;
+					 color: lighten(@gray-light,10%) !important;
+					 text-align:center; 
+					 .transition(200ms; ease-in-out);
+				}
+			}
+			.info {
+				margin-top:-24px;
+				padding: 15px 0 10px 0; 
+
+				h3.title {
+					font-size: 1.5em; color: @brand-primary;
+				}
+
+				p {
+					font-size: 1em;
+					color: #666666;
+					line-height: 1.5em;
+					margin: 20px;
+				}
+
+			}
+		&:hover {
+			.image {
+				i {
+					 color: @gray-light !important;
+				}
+			}
+			a {
+				color:@gray-dark;
+				border-color:@gray-dark;
+			}
+		}
+	}
+}

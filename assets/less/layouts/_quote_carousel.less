@@ -1,4 +1,14 @@
+.btn-compliment {
+  .button-variant(#ffffff;@base-compliment-dark;@base-compliment-dark);
+}
+
 /* carousel */
+#homeQuotes {
+  .wrap.container {
+    margin-top:3em;
+    margin-bottom:3em;
+  }
+}
 #quote-carousel 
 {
   padding: 0 10px 30px 10px;
@@ -9,10 +19,13 @@
 #quote-carousel .carousel-control
 {
   background: none;
-  color: #222;
+  color: darken(@base-compliment,20%);
   font-size: 2.3em;
   text-shadow: none;
   margin-top: 30px;
+  &:hover {
+    color:#ffffff;
+  }
 }
 /* Previous button  */
 #quote-carousel .carousel-control.left 
@@ -35,22 +48,20 @@
 /* Changes the color of the indicators */
 #quote-carousel .carousel-indicators li 
 {
-  background: #c0c0c0;
+  background: @base-compliment-dark;
+  border-color: @base-compliment-dark;
 }
 #quote-carousel .carousel-indicators .active 
 {
-  background: #333333;
-}
-#quote-carousel img
-{
-  width: 250px;
-  height: 100px
+  background: #ffffff;
+  border-color:#ffffff;
 }
 /* End carousel */
 
 .item blockquote {
     border-left: none; 
     margin: 0;
+    color:#ffffff;
 }
 
 .item blockquote img {
@@ -59,13 +70,21 @@
 
 .item blockquote p:before {
     content: "\f10d";
+    color:#ffffff;
     font-family: 'Fontawesome';
     float: left;
     margin-right: 10px;
 }
+.item p {
+  font-size:1em;
+}
+.item small {
+  color: darken(#ffffff,20%);
+}
 
-
-
+.testimonialsLink {
+  margin-top:2em;
+}
 /**
   MEDIA QUERIES
 */
@@ -95,10 +114,5 @@
         margin: 0px 5px;
         width: 15px;
         height: 15px;
-    }
-    #quote-carousel .carousel-indicators li.active {
-        margin: 0px 5px;
-        width: 20px;
-        height: 20px;
     }
 }

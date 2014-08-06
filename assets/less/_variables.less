@@ -32,25 +32,26 @@
 
 /* Mixin */
 @base: @brand-primary;
-@compliment: lighten(spin(@base, 180), 25%);
-@compliment-dark: lighten(spin(@base, 180), 18%);
-@base-light-primary: lighten(@base, 15%);
-@base-light-secondary: lighten(@base, 30%);
+@base-light: lighten(@base, 15%);
+@base-lighter: lighten(@base, 30%);
+@base-compliment: lighten(spin(@base, 180), 18%);
+@base-compliment-light: lighten(spin(@base, 180), 25%);
+@base-compliment-dark: lighten(spin(@base, 180), 11%);
 
 .base-color {
 	background-color:@base;
 }
 .compliment-color {
-	background-color:@compliment;
+	background-color:@base-compliment-light;
 }
 .compliment-dark {
-	background-color:@compliment-dark;
+	background-color:@base-compliment;
 }
 .base-light-primary {
-	background-color:@base-light-primary;
+	background-color:@base-light;
 }
 .base-light-secondary {
-	background-color:@base-light-secondary;
+	background-color:@base-lighter;
 }
 
 

@@ -38,6 +38,7 @@ function roots_scripts() {
   }
 
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
+  wp_enqueue_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', array('roots_css'));
 
   /**
    * jQuery is loaded using the same method from HTML5 Boilerplate:
