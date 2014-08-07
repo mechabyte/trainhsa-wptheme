@@ -619,6 +619,34 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
             );
 
             $this->sections[] = array(
+                'title'     => __('Social Networking', 'redux-framework-demo'),
+                'icon'      => 'el-icon-group',
+                // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
+                'fields'    => array(
+                    array(
+                            'id'        => 'opt-social-facebook',
+                            'type'      => 'text',
+                            'title'     => __('Facebook URL', 'redux-framework-demo'),
+                        ),
+                    array(
+                            'id'        => 'opt-social-twitter',
+                            'type'      => 'text',
+                            'title'     => __('Twitter Username', 'redux-framework-demo'),
+                        ),
+                    array(
+                            'id'        => 'opt-social-instagram',
+                            'type'      => 'text',
+                            'title'     => __('Instagram Username', 'redux-framework-demo'),
+                        ),
+                    array(
+                            'id'        => 'opt-social-youtube',
+                            'type'      => 'text',
+                            'title'     => __('YouTube Username', 'redux-framework-demo'),
+                        ),
+                    )
+            );
+
+            $this->sections[] = array(
                 'icon'      => 'el-icon-cogs',
                 'title'     => __('General Settings', 'redux-framework-demo'),
                 'fields'    => array(

@@ -32,7 +32,7 @@ $freeTrialShortcode = $trainhsa['opt-cta-signup-form'];
 	</div><!-- .wrap .container -->
 
 <div id="homeWidgets">
-	<div class="main col-sm-12">
+	<div class="main col-xs-12">
 		<div class="content row">
 			<div class="wrap container">
 				<div class="row">
@@ -42,9 +42,26 @@ $freeTrialShortcode = $trainhsa['opt-cta-signup-form'];
 			</div>
 		</div>
 	</div>
+	<div class="clearfix visible-xs visible-sm"></div>
 </div>
+
+<div id="homeContent">
+    <div class="main col-xs-12" style="background:#ffffff;padding-top:4em;padding-bottom:4em;">
+        <div class="content row">
+            <div class="wrap container">
+                <div class="row">
+                    <?php while (have_posts()) : the_post(); ?>
+                        <?php get_template_part('templates/content', 'page'); ?>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix visible-xs visible-sm"></div>
+</div>
+
 <div id="homeQuotes">
-	<div class="main col-sm-12">
+	<div class="main col-xs-12">
 		<div class="content row compliment-color">
 			<div class="wrap container">
 				<div class="row">
@@ -55,12 +72,7 @@ $freeTrialShortcode = $trainhsa['opt-cta-signup-form'];
 		</div>
 	</div>
 </div>
-<!--
-<?php while (have_posts()) : the_post(); ?>
-  <?php //get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
-<?php endwhile; ?>
--->
+
 <!-- Modal -->
 <div class="modal fade" id="trialModal" tabindex="-1" role="dialog" aria-labelledby="trialModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -76,36 +88,3 @@ $freeTrialShortcode = $trainhsa['opt-cta-signup-form'];
   </div>
 </div>
 <div class="main col-sm-12" style="display:none;">
-<?php /*
-<!--
-<div class="col-md-4">
-<div class="list-group social-box">
-        <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
-            <h3 class="pull-right">
-                <i class="fa fa-facebook-square"></i>
-            </h3>
-            <h4 class="list-group-item-heading count">
-                <?php echo number_format( mechabyteSocialStats::facebook(117978191570403) ); ?></h4>
-            <p class="list-group-item-text">
-                Like Us on Facebook</p>
-        </a><a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
-            <h3 class="pull-right">
-                <i class="fa fa-twitter-square"></i>
-            </h3>
-            <h4 class="list-group-item-heading count">
-                344</h4>
-            <p class="list-group-item-text">
-                Follow Us on Twitter</p>
-        </a>
-        <a href="http://www.jquery2dotnet.com" class="list-group-item youtube">
-                        <h3 class="pull-right">
-                            <i class="fa fa-youtube-play"></i>
-                        </h3>
-                        <h4 class="list-group-item-heading count">
-                            <?php echo ( mechabyteSocialStats::youtube('techteenager') ); ?></h4>
-                        <p class="list-group-item-text">
-                            Subscribe on YouTube</p>
-                    </a>
-    </div>
-</div>-->
-?>

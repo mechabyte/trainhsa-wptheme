@@ -47,6 +47,7 @@
 		<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
 	</div>
 </div>
-<div class="col-sm-12 text-center">
-	<a href="<?php echo get_permalink( $trainhsa['opt-quotes-link'] ); ?>" class="testimonialsLink btn btn-compliment">More Testimonials</a>
+<!--<div class="col-sm-12 text-center">
+	<a href="<?php echo $trainhsa['opt-quotes-link']; ?>" class="testimonialsLink btn btn-compliment">More Testimonials</a>
 </div>
+-->

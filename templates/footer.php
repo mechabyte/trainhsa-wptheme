@@ -1,11 +1,22 @@
+<?php
+global $trainhsa;
+$socialBase = array(
+	'facebook'	=> '',
+	'twitter'	=> 'https://twitter.com/',
+	'instagram'	=> 'https://instagram.com/',
+	'youtube'	=> 'https://youtube.com/'
+	);
+?>
 <div id="footer-social">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 text-center">
-				<a href="https://www.facebook.com/bootsnipp"><i id="socialfb" class="fa fa-facebook fa-3x social-fb"></i></a>
-	            <a href="https://twitter.com/bootsnipp"><i id="socialtw" class="fa fa-twitter fa-3x social-tw"></i></a>
-	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="socialgp" class="fa fa-google-plus fa-3x social-gp"></i></a>
-	            <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope fa-3x social-em"></i></a>
+				<?php foreach($socialBase as $key => $base) {
+					$networkID = $trainhsa['opt-social-'.$key];
+					if($networkID != "") { ?>
+						<a href="<?php echo $base; echo $networkID; ?>" target="_blank"><i id="social-<?php echo $key; ?>" class="fa fa-<?php echo $key; ?> fa-3x"></i></a>
+					<?php }
+				} ?>
 			</div>
 		</div>
 	</div>

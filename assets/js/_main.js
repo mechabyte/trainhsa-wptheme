@@ -29,6 +29,8 @@ var Roots = {
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+      $("#homeWidgets section > ul").addClass("list-group");
+      $("#homeWidgets section > ul > li").addClass("list-group-item");
     }
   },
   // About us page, note the change from about-us to about_us.
