@@ -31,6 +31,7 @@ var Roots = {
       // JavaScript to be fired on the home page
       $("#homeWidgets section > ul").addClass("list-group");
       $("#homeWidgets section > ul > li").addClass("list-group-item");
+      $('#home-carousel').click(function() { $(this).carousel('pause'); });
     }
   },
   // About us page, note the change from about-us to about_us.

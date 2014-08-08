@@ -17,7 +17,7 @@ define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only
  * .main classes
  */
 function roots_main_class() {
-  if (roots_display_sidebar()) {
+  if ( roots_display_sidebar() && !is_page_template( 'template-fullwidth.php' ) ) {
     // Classes on pages with the sidebar
     $class = 'col-sm-8';
   } else {

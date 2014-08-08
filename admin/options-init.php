@@ -446,15 +446,6 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                         ),
                     ),
 
-                    array(
-                            'id'        => 'opt-quotes-link',
-                            'type'      => 'select',
-                            'data'      => 'pages',
-                            'title'     => __('Testimonials Page', 'redux-framework-demo'),
-                        ),
-
-
-
                     /*
                     array(
                         'id'            => 'opt-typography',
@@ -504,9 +495,15 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                                 'training'      => 'Training',
                                 'leagues'       => 'Leagues',
                                 'camps'         => 'Camps & Clinics',
-                                'tournaments'   => 'Tournaments'
+                                'tournaments'   => 'Tournaments',
+                                'afterschool'   => 'After School Programs',
+                                'homeschool'    => 'Home School Programs',
+                                'travelteams'   => 'Travel Teams'
                             ),
                             'disabled'  => array()
+                        ),
+                        'limits' => array(
+                            'enabled'  => 4,
                         ),
                     ),
 
@@ -540,6 +537,12 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                         ),
 
                         array(
+                            'id'        => 'opt-cta-training-trial-text',
+                            'type'      => 'text',
+                            'title'     => __('Popup Trial Form - Link Text', 'redux-framework-demo'),
+                        ),
+
+                        array(
                             'id'        => 'opt-cta-signup-form-alert',
                             'type'      => 'text',
                             'required'  => array('opt-cta-training-trial-boolean', 'equals', '1'),
@@ -550,7 +553,7 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                             'id'        => 'opt-cta-training-link',
                             'type'      => 'select',
                             'data'      => 'pages',
-                            'required'  => array('opt-cta-training-trial-boolean', 'equals', '0'),
+                            //'required'  => array('opt-cta-training-trial-boolean', 'equals', '0'),
                             'title'     => __('Training Box - Link To?', 'redux-framework-demo'),
                         ),
 
@@ -611,11 +614,65 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                             'data'      => 'pages',
                             'title'     => __('Tournaments Box - Link To?', 'redux-framework-demo'),
                         ),
-                ),
-            );
 
-            $this->sections[] = array(
-                'type' => 'divide',
+                    array(
+                        'id'        => 'opt-cta-homeschool-text',
+                        'type'      => 'textarea',
+                        'title'     => __('Home School Programs Box - Body Text', 'redux-framework-demo')
+                    ),
+
+                        array(
+                            'id'        => 'opt-cta-homeschool-link-text',
+                            'type'      => 'text',
+                            'title'     => __('Home School Programs Box - Link Text', 'redux-framework-demo'),
+                        ),
+
+                        array(
+                            'id'        => 'opt-cta-homeschool-link',
+                            'type'      => 'select',
+                            'data'      => 'pages',
+                            'title'     => __('Home School Programs Box - Link To?', 'redux-framework-demo'),
+                        ),
+
+                    array(
+                        'id'        => 'opt-cta-afterschool-text',
+                        'type'      => 'textarea',
+                        'title'     => __('After School Programs Box - Body Text', 'redux-framework-demo')
+                    ),
+
+                        array(
+                            'id'        => 'opt-cta-afterschool-link-text',
+                            'type'      => 'text',
+                            'title'     => __('After School Programs Box - Link Text', 'redux-framework-demo'),
+                        ),
+
+                        array(
+                            'id'        => 'opt-cta-afterschool-link',
+                            'type'      => 'select',
+                            'data'      => 'pages',
+                            'title'     => __('After School Programs Box - Link To?', 'redux-framework-demo'),
+                        ),
+
+                    array(
+                        'id'        => 'opt-cta-travelteams-text',
+                        'type'      => 'textarea',
+                        'title'     => __('Travel Teams Box - Body Text', 'redux-framework-demo')
+                    ),
+
+                        array(
+                            'id'        => 'opt-cta-travelteams-link-text',
+                            'type'      => 'text',
+                            'title'     => __('Travel Teams Box - Link Text', 'redux-framework-demo'),
+                        ),
+
+                        array(
+                            'id'        => 'opt-cta-travelteams-link',
+                            'type'      => 'select',
+                            'data'      => 'pages',
+                            'title'     => __('Travel Teams Box - Link To?', 'redux-framework-demo'),
+                        ),
+
+                ),
             );
 
             $this->sections[] = array(
@@ -650,22 +707,7 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                 'icon'      => 'el-icon-cogs',
                 'title'     => __('General Settings', 'redux-framework-demo'),
                 'fields'    => array(
-                    array(
-                        'id'        => 'opt-layout',
-                        'type'      => 'image_select',
-                        'compiler'  => true,
-                        'title'     => __('Main Layout', 'redux-framework-demo'),
-                        'subtitle'  => __('Select main content and sidebar alignment. Choose between 1, 2 or 3 column layout.', 'redux-framework-demo'),
-                        'options'   => array(
-                            '1' => array('alt' => '1 Column',       'img' => ReduxFramework::$_url . 'assets/img/1col.png'),
-                            '2' => array('alt' => '2 Column Left',  'img' => ReduxFramework::$_url . 'assets/img/2cl.png'),
-                            '3' => array('alt' => '2 Column Right', 'img' => ReduxFramework::$_url . 'assets/img/2cr.png'),
-                            '4' => array('alt' => '3 Column Middle','img' => ReduxFramework::$_url . 'assets/img/3cm.png'),
-                            '5' => array('alt' => '3 Column Left',  'img' => ReduxFramework::$_url . 'assets/img/3cl.png'),
-                            '6' => array('alt' => '3 Column Right', 'img' => ReduxFramework::$_url . 'assets/img/3cr.png')
-                        ),
-                        'default'   => '2'
-                    ),
+                    
                     array(
                         'id'        => 'opt-textarea',
                         'type'      => 'textarea',
@@ -676,207 +718,29 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                         'desc'      => 'Validate that it\'s javascript!',
                     ),
                     array(
-                        'id'        => 'opt-ace-editor-css',
+                        'id'        => 'opt-custom-css',
                         'type'      => 'ace_editor',
                         'title'     => __('CSS Code', 'redux-framework-demo'),
-                        'subtitle'  => __('Paste your CSS code here.', 'redux-framework-demo'),
+                        'subtitle'  => __('Paste any custom CSS code here.', 'redux-framework-demo'),
                         'mode'      => 'css',
                         'theme'     => 'monokai',
-                        'desc'      => 'Possible modes can be found at <a href="http://ace.c9.io" target="_blank">http://ace.c9.io/</a>.',
-                        'default'   => "#header{\nmargin: 0 auto;\n}"
                     ),
                     array(
-                        'id'        => 'opt-ace-editor-js',
+                        'id'        => 'opt-custom-js',
                         'type'      => 'ace_editor',
                         'title'     => __('JS Code', 'redux-framework-demo'),
-                        'subtitle'  => __('Paste your JS code here.', 'redux-framework-demo'),
+                        'subtitle'  => __('Paste any custom JS code here.', 'redux-framework-demo'),
                         'mode'      => 'javascript',
                         'theme'     => 'chrome',
-                        'desc'      => 'Possible modes can be found at <a href="http://ace.c9.io" target="_blank">http://ace.c9.io/</a>.',
                         'default'   => "jQuery(document).ready(function(){\n\n});"
                     ),
                     array(
-                        'id'        => 'opt-ace-editor-php',
-                        'type'      => 'ace_editor',
-                        'title'     => __('PHP Code', 'redux-framework-demo'),
-                        'subtitle'  => __('Paste your PHP code here.', 'redux-framework-demo'),
-                        'mode'      => 'php',
-                        'theme'     => 'chrome',
-                        'desc'      => 'Possible modes can be found at <a href="http://ace.c9.io" target="_blank">http://ace.c9.io/</a>.',
-                        'default'   => '<?php\nisset ( $redux ) ? true : false;\n?>'
-                    ),
-                    array(
-                        'id'        => 'opt-editor',
-                        'type'      => 'editor',
-                        'title'     => __('Footer Text', 'redux-framework-demo'),
-                        'subtitle'  => __('You can use the following shortcodes in your footer text: [wp-url] [site-url] [theme-url] [login-url] [logout-url] [site-title] [site-tagline] [current-year]', 'redux-framework-demo'),
-                        'default'   => 'Powered by Redux Framework.',
-                    ),
-                    array(
-                        'id'        => 'password',
-                        'type'      => 'password',
-                        'username'  => true,
-                        'title'     => 'SMTP Account',
-                        //'placeholder' => array('username' => 'Enter your Username')
-                    )
-                )
-            );
-
-            $this->sections[] = array(
-                'icon'      => 'el-icon-website',
-                'title'     => __('Styling Options', 'redux-framework-demo'),
-                'fields'    => array(
-                    array(
-                        'id'        => 'opt-select-stylesheet',
-                        'type'      => 'select',
-                        'title'     => __('Theme Stylesheet', 'redux-framework-demo'),
-                        'subtitle'  => __('Select your themes alternative color scheme.', 'redux-framework-demo'),
-                        'options'   => array('default.css' => 'default.css', 'color1.css' => 'color1.css'),
-                        'default'   => 'default.css',
-                    ),
-                    array(
-                        'id'        => 'opt-color-background',
-                        'type'      => 'color',
-                        'output'    => array('.site-title'),
-                        'title'     => __('Body Background Color', 'redux-framework-demo'),
-                        'subtitle'  => __('Pick a background color for the theme (default: #fff).', 'redux-framework-demo'),
-                        'default'   => '#FFFFFF',
-                        'validate'  => 'color',
-                    ),
-                    array(
-                        'id'        => 'opt-background',
-                        'type'      => 'background',
-                        'output'    => array('body'),
-                        'title'     => __('Body Background', 'redux-framework-demo'),
-                        'subtitle'  => __('Body background with image, color, etc.', 'redux-framework-demo'),
-                        //'default'   => '#FFFFFF',
-                    ),
-                    array(
-                        'id'        => 'opt-color-footer',
-                        'type'      => 'color',
-                        'title'     => __('Footer Background Color', 'redux-framework-demo'),
-                        'subtitle'  => __('Pick a background color for the footer (default: #dd9933).', 'redux-framework-demo'),
-                        'default'   => '#dd9933',
-                        'validate'  => 'color',
-                    ),
-                    array(
-                        'id'        => 'opt-color-rgba',
-                        'type'      => 'color_rgba',
-                        'title'     => __('Color RGBA - BETA', 'redux-framework-demo'),
-                        'subtitle'  => __('Gives you the RGBA color. Still quite experimental. Use at your own risk.', 'redux-framework-demo'),
-                        'default'   => array('color' => '#dd9933', 'alpha' => '1.0'),
-                        'output'    => array('body'),
-                        'mode'      => 'background',
-                        'validate'  => 'colorrgba',
-                    ),
-                    array(
-                        'id'        => 'opt-color-header',
-                        'type'      => 'color_gradient',
-                        'title'     => __('Header Gradient Color Option', 'redux-framework-demo'),
-                        'subtitle'  => __('Only color validation can be done on this field type', 'redux-framework-demo'),
-                        'desc'      => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-                        'default'   => array(
-                            'from'      => '#1e73be', 
-                            'to'        => '#00897e'
-                        )
-                    ),
-                    array(
-                        'id'        => 'opt-link-color',
-                        'type'      => 'link_color',
-                        'title'     => __('Links Color Option', 'redux-framework-demo'),
-                        'subtitle'  => __('Only color validation can be done on this field type', 'redux-framework-demo'),
-                        'desc'      => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-                        //'regular'   => false, // Disable Regular Color
-                        //'hover'     => false, // Disable Hover Color
-                        //'active'    => false, // Disable Active Color
-                        //'visited'   => true,  // Enable Visited Color
-                        'default'   => array(
-                            'regular'   => '#aaa',
-                            'hover'     => '#bbb',
-                            'active'    => '#ccc',
-                        )
-                    ),
-                    array(
-                        'id'        => 'opt-header-border',
-                        'type'      => 'border',
-                        'title'     => __('Header Border Option', 'redux-framework-demo'),
-                        'subtitle'  => __('Only color validation can be done on this field type', 'redux-framework-demo'),
-                        'output'    => array('.site-header'), // An array of CSS selectors to apply this font style to
-                        'desc'      => __('This is the description field, again good for additional info.', 'redux-framework-demo'),
-                        'default'   => array(
-                            'border-color'  => '#1e73be', 
-                            'border-style'  => 'solid', 
-                            'border-top'    => '3px', 
-                            'border-right'  => '3px', 
-                            'border-bottom' => '3px', 
-                            'border-left'   => '3px'
-                        )
-                    ),
-                    array(
-                        'id'            => 'opt-spacing',
-                        'type'          => 'spacing',
-                        'output'        => array('.site-header'), // An array of CSS selectors to apply this font style to
-                        'mode'          => 'margin',    // absolute, padding, margin, defaults to padding
-                        'all'           => true,        // Have one field that applies to all
-                        //'top'           => false,     // Disable the top
-                        //'right'         => false,     // Disable the right
-                        //'bottom'        => false,     // Disable the bottom
-                        //'left'          => false,     // Disable the left
-                        //'units'         => 'em',      // You can specify a unit value. Possible: px, em, %
-                        //'units_extended'=> 'true',    // Allow users to select any type of unit
-                        //'display_units' => 'false',   // Set to false to hide the units if the units are specified
-                        'title'         => __('Padding/Margin Option', 'redux-framework-demo'),
-                        'subtitle'      => __('Allow your users to choose the spacing or margin they want.', 'redux-framework-demo'),
-                        'desc'          => __('You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'redux-framework-demo'),
-                        'default'       => array(
-                            'margin-top'    => '1px', 
-                            'margin-right'  => '2px', 
-                            'margin-bottom' => '3px', 
-                            'margin-left'   => '4px'
-                        )
-                    ),
-                    array(
-                        'id'                => 'opt-dimensions',
-                        'type'              => 'dimensions',
-                        'units'             => 'em',    // You can specify a unit value. Possible: px, em, %
-                        'units_extended'    => 'true',  // Allow users to select any type of unit
-                        'title'             => __('Dimensions (Width/Height) Option', 'redux-framework-demo'),
-                        'subtitle'          => __('Allow your users to choose width, height, and/or unit.', 'redux-framework-demo'),
-                        'desc'              => __('You can enable or disable any piece of this field. Width, Height, or Units.', 'redux-framework-demo'),
-                        'default'           => array(
-                            'width'     => 200, 
-                            'height'    => 100,
-                        )
-                    ),
-                    array(
-                        'id'        => 'opt-typography-body',
-                        'type'      => 'typography',
-                        'title'     => __('Body Font', 'redux-framework-demo'),
-                        'subtitle'  => __('Specify the body font properties.', 'redux-framework-demo'),
-                        'google'    => true,
-                        'default'   => array(
-                            'color'         => '#dd9933',
-                            'font-size'     => '30px',
-                            'font-family'   => 'Arial,Helvetica,sans-serif',
-                            'font-weight'   => 'Normal',
+                            'id'        => 'opt-analytics',
+                            'type'      => 'text',
+                            'title'     => __('Google Analytics Tracking ID', 'redux-framework-demo'),
+                            'subtitle'  => __('UA-XXXXXXXX-X'),
+                            'default'   => 'UA-23195150-1',
                         ),
-                    ),
-                    array(
-                        'id'        => 'opt-custom-css',
-                        'type'      => 'textarea',
-                        'title'     => __('Custom CSS', 'redux-framework-demo'),
-                        'subtitle'  => __('Quickly add some CSS to your theme by adding it to this block.', 'redux-framework-demo'),
-                        'desc'      => __('This field is even CSS validated!', 'redux-framework-demo'),
-                        'validate'  => 'css',
-                    ),
-                    array(
-                        'id'        => 'opt-custom-html',
-                        'type'      => 'textarea',
-                        'title'     => __('Custom HTML', 'redux-framework-demo'),
-                        'subtitle'  => __('Just like a text box widget.', 'redux-framework-demo'),
-                        'desc'      => __('This field is even HTML validated!', 'redux-framework-demo'),
-                        'validate'  => 'html',
-                    ),
                 )
             );
 
