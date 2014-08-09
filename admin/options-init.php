@@ -236,7 +236,48 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
 
             // ACTUAL DECLARATION OF SECTIONS
             $this->sections[] = array(
-                'title'     => __('Homepage Settings', 'redux-framework-demo'),
+                'icon'      => 'el-icon-cogs',
+                'title'     => __('General Settings', 'redux-framework-demo'),
+                'fields'    => array(
+                    
+                    array(
+                        'id'        => 'opt-textarea',
+                        'type'      => 'textarea',
+                        'required'  => array('layout', 'equals', '1'),
+                        'title'     => __('Tracking Code', 'redux-framework-demo'),
+                        'subtitle'  => __('Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'redux-framework-demo'),
+                        'validate'  => 'js',
+                        'desc'      => 'Validate that it\'s javascript!',
+                    ),
+                    array(
+                        'id'        => 'opt-custom-css',
+                        'type'      => 'ace_editor',
+                        'title'     => __('CSS Code', 'redux-framework-demo'),
+                        'subtitle'  => __('Paste any custom CSS code here.', 'redux-framework-demo'),
+                        'mode'      => 'css',
+                        'theme'     => 'monokai',
+                    ),
+                    array(
+                        'id'        => 'opt-custom-js',
+                        'type'      => 'ace_editor',
+                        'title'     => __('JS Code', 'redux-framework-demo'),
+                        'subtitle'  => __('Paste any custom JS code here.', 'redux-framework-demo'),
+                        'mode'      => 'javascript',
+                        'theme'     => 'chrome',
+                        'default'   => "jQuery(document).ready(function(){\n\n});"
+                    ),
+                    array(
+                            'id'        => 'opt-analytics',
+                            'type'      => 'text',
+                            'title'     => __('Google Analytics Tracking ID', 'redux-framework-demo'),
+                            'subtitle'  => __('UA-XXXXXXXX-X'),
+                            'default'   => 'UA-23195150-1',
+                        ),
+                )
+            );
+
+            $this->sections[] = array(
+                'title'     => __('Slider Settings', 'redux-framework-demo'),
                 'icon'      => 'el-icon-home',
                 // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                 'fields'    => array(
@@ -703,53 +744,13 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                     )
             );
 
-            $this->sections[] = array(
-                'icon'      => 'el-icon-cogs',
-                'title'     => __('General Settings', 'redux-framework-demo'),
-                'fields'    => array(
-                    
-                    array(
-                        'id'        => 'opt-textarea',
-                        'type'      => 'textarea',
-                        'required'  => array('layout', 'equals', '1'),
-                        'title'     => __('Tracking Code', 'redux-framework-demo'),
-                        'subtitle'  => __('Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'redux-framework-demo'),
-                        'validate'  => 'js',
-                        'desc'      => 'Validate that it\'s javascript!',
-                    ),
-                    array(
-                        'id'        => 'opt-custom-css',
-                        'type'      => 'ace_editor',
-                        'title'     => __('CSS Code', 'redux-framework-demo'),
-                        'subtitle'  => __('Paste any custom CSS code here.', 'redux-framework-demo'),
-                        'mode'      => 'css',
-                        'theme'     => 'monokai',
-                    ),
-                    array(
-                        'id'        => 'opt-custom-js',
-                        'type'      => 'ace_editor',
-                        'title'     => __('JS Code', 'redux-framework-demo'),
-                        'subtitle'  => __('Paste any custom JS code here.', 'redux-framework-demo'),
-                        'mode'      => 'javascript',
-                        'theme'     => 'chrome',
-                        'default'   => "jQuery(document).ready(function(){\n\n});"
-                    ),
-                    array(
-                            'id'        => 'opt-analytics',
-                            'type'      => 'text',
-                            'title'     => __('Google Analytics Tracking ID', 'redux-framework-demo'),
-                            'subtitle'  => __('UA-XXXXXXXX-X'),
-                            'default'   => 'UA-23195150-1',
-                        ),
-                )
-            );
-
             /**
              *  Note here I used a 'heading' in the sections array construct
              *  This allows you to use a different title on your options page
              * instead of reusing the 'title' value.  This can be done on any
              * section - kp
              */
+            /*
             $this->sections[] = array(
                 'icon'      => 'el-icon-bullhorn',
                 'title'     => __('Field Validation', 'redux-framework-demo'),
@@ -1391,6 +1392,8 @@ if (!class_exists('admin_folder_Redux_Framework_config')) {
                     ),
                 )
             );
+
+            */
 
             $this->sections[] = array(
                 'title'     => __('Import / Export', 'redux-framework-demo'),
